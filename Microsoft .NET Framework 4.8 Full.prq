@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetupPrereq>
+	<conditions>
+		<condition Type="2" Comparison="2" Path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" FileName="Release" ReturnValue="528040"/>
+	</conditions>
+	<operatingsystemconditions>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="3" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="1" PlatformId="2" CSDVersion="" ServicePackMajorMin="1"/>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" PlatformId="2" CSDVersion="" ProductType="2|3"/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="2" PlatformId="2" CSDVersion="" ProductType="2|3"/>
+	</operatingsystemconditions>
+	<files>
+		<file LocalFile=".\Microsoft .net\4.8\Full\ndp48-x86-x64-allos-enu.exe" URL="https://download.visualstudio.microsoft.com/download/pr/7afca223-55d2-470a-8edc-6a1739ae3252/abd170b4b0ec15ad0222a809b761a036/ndp48-x86-x64-allos-enu.exe" CheckSum="4E7A8586D06CE1F8CEBAC0D4BC379E16" FileSize="0,72721568"/>
+	</files>
+	<execute file="ndp48-x86-x64-allos-enu.exe" cmdline="/q /norestart" cmdlinesilent="/q /norestart" returncodetoreboot="1641,3010"/>
+	<properties Id="{06D565DC-042E-4F1B-8702-2E0BD0F22805}" Description="This prerequisite installs the .NET Framework 4.8 Offline installer package."/>
+	<behavior Reboot="2"/>
+</SetupPrereq>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetupPrereq>
+	<conditions>
+		<condition Type="2" Comparison="2" Path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x86\" FileName="Version" ReturnValue="v14.28.29914.00"/>
+	</conditions>
+	<operatingsystemconditions>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="0" PlatformId="2" CSDVersion="" ServicePackMajorMin="2"/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="1" PlatformId="2" CSDVersion="" ServicePackMajorMin="1"/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="2" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="6" MinorVersion="3" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="5" MinorVersion="2" PlatformId="2" CSDVersion="" ProductType="2|3" ServicePackMajorMin="2"/>
+		<operatingsystemcondition MajorVersion="10" MinorVersion="0" PlatformId="2" CSDVersion=""/>
+		<operatingsystemcondition MajorVersion="5" MinorVersion="1" PlatformId="2" CSDVersion="" Bits="1" ProductType="1" ServicePackMajorMin="3"/>
+	</operatingsystemconditions>
+	<files>
+		<file LocalFile=".\VC 2015-2019 Redist v14.28\vc_redist.x86.exe" URL="https://download.visualstudio.microsoft.com/download/pr/85d47aa9-69ae-4162-8300-e6b7e4bf3cf3/14563755AC24A874241935EF2C22C5FCE973ACB001F99E524145113B2DC638C1/VC_redist.x86.exe" CheckSum="EC00A28970A8EBD1C2963DF8C3F54AD3" FileSize="0,14327344"/>
+	</files>
+	<execute file="vc_redist.x86.exe" cmdline="/q /norestart" cmdlinesilent="/q /norestart" returncodetoreboot="1641,3010"/>
+	<properties Id="{44211AA4-33D4-41BA-A4BA-7EFB4C835E65}" Description="This prerequisite installs the Microsoft Visual C++ 2015-2019 Redistributable Package (x86)"/>
+	<behavior Reboot="2"/>
+</SetupPrereq>
